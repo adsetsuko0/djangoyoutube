@@ -11,8 +11,6 @@ def product_list(request, category_slug=None):
         products=products.filter(category=category)
 
     return render(request, 'main/product/list.html',
-                   {
-                      'category': category,
-                      'categories': categories,
-                      'products': products
-                  })
+                   {'category': category,
+                    'categories': categories,
+                    'products': products})
