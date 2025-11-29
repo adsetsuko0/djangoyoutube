@@ -10,7 +10,7 @@ def product_list(request, category_slug=None):
         category= get_object_or_404(Category, category_slug=category_slug)
         products=products.filter(category=category)
 
-    return render(request, 'main/templates/main/product/list.html',
+    return render(request, 'main/product/list.html',
                    {'category': category,
                     'categories': categories,
                     'products': products})
